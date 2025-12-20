@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuure.health - Professional Home Healthcare Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div id="top"></div>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#top" class="logo">
+                <img src="images/cuure.jpg" alt="Cuure Health Logo">
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button type="button" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#booking">Book Appointment</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Doctor Care at Your Doorstep</h1>
+        <p>Certified doctors and medical professionals visiting your home for treatment. Affordable, convenient, and trusted healthcare.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Appointment</button>
+            <button class="btn btn-secondary" onclick="alert('Call: +91-XXXXXXXXXX')">Call Now</button>
+        </div>
+        <div class="trust-badges">
+            <div class="badge">
+                <div class="badge-icon">✓</div>
+                <div class="badge-text">Certified Doctors</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🏆</div>
+                <div class="badge-text">5000+ Happy Patients</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">⏰</div>
+                <div class="badge-text">24/7 Available</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">💳</div>
+                <div class="badge-text">Secure Payment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">About Our Mission</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/doc.jpg" alt="Doctor at home">
+                </div>
+                <div class="about-text">
+                    <h3>Healthcare Delivered to Your Home</h3>
+                    <p>We believe healthcare should be accessible, convenient, and affordable for everyone. Our mission is to bring qualified medical professionals directly to your home, eliminating travel hassles and reducing wait times.</p>
+                    <ul class="about-list">
+                        <li>Experienced medical professionals with years of expertise</li>
+                        <li>Quick response time and flexible scheduling</li>
+                        <li>Comprehensive health consultations and treatments</li>
+                        <li>Personalized care in the comfort of your home</li>
+                        <li>Transparent and competitive pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/doctorconsultation.jpg" loading="lazy" alt="Doctor Consultation">
+                    </div>
+                    <h4>Doctor Consultation</h4>
+                    <p>Expert medical advice from certified doctors for all health concerns.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/nursingcare.jpg" loading="lazy" alt="Nursing Care">
+                    </div>
+                    <h4>Nursing Care</h4>
+                    <p>Professional nursing services including wound care and injections.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/physiotherapy.jpg" loading="lazy" alt="Physiotherapy">
+                    </div>
+                    <h4>Physiotherapy</h4>
+                    <p>Customized rehabilitation and physical therapy sessions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/labtest.jpg" loading="lazy" alt="Lab Tests at Home">
+                    </div>
+                    <h4>Lab Tests at Home</h4>
+                    <p>Convenient blood tests and diagnostic sampling at home.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/elderlycare.jpg" loading="lazy" alt="Elderly Care">
+                    </div>
+                    <h4>Elderly Care</h4>
+                    <p>Specialized care for senior citizens with chronic conditions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="images/24.png" loading="lazy" alt="Emergency Visit">
+                    </div>
+                    <h4>24/7 Emergency Visit</h4>
+                    <p>Round-the-clock emergency medical response.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why">
+        <div class="section-container">
+            <h2 class="section-title">Why choose US?</h2>
+            <div class="why-us-grid">
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/quick.png" alt="Quick Booking">
+                    </div>
+                    <h4>Quick Booking</h4>
+                    <p>Schedule appointments in just 2 minutes with our streamlined booking system.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/Affordable.png" alt="Affordable Rates">
+                    </div>
+                    <h4>Affordable Rates</h4>
+                    <p>Transparent pricing with no hidden charges. Insurance coverage available.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/Verifieddocs.png" alt="Verified Doctors">
+                    </div>
+                    <h4>Verified Doctors</h4>
+                    <p>All professionals are verified, experienced, and registered with medical boards.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/secure.png" alt="Safe & Secure">
+                    </div>
+                    <h4>Safe & Secure</h4>
+                    <p>Your privacy is our priority. All data is encrypted and securely stored.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/Easyfollow.png" alt="Easy Follow-Up">
+                    </div>
+                    <h4>Easy Follow-Up</h4>
+                    <p>Digital prescriptions, test reports, and convenient follow-up consultations.</p>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">
+                        <img src="images/trusted.png" alt="Trusted Service">
+                    </div>
+                    <h4>Trusted Service</h4>
+                    <p>Rated 4.8/5 with over 5000+ satisfied patients across the city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+     <section class="booking" id="booking">
+        <div class="section-container">
+            <div class="booking-container">
+                <h2>Book Your Appointment</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <span class="form-error">Please enter your name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number" pattern="[0-9]{10}" required>
+                        <span class="form-error">Please enter a valid 10-digit phone number</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your complete address" required>
+                        <span class="form-error">Please enter your address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Doctor Consultation">Doctor Consultation</option>
+                            <option value="Nursing Care">Nursing Care</option>
+                            <option value="Physiotherapy">Physiotherapy</option>
+                            <option value="Lab Tests">Lab Tests at Home</option>
+                            <option value="Elderly Care">Elderly Care</option>
+                            <option value="Emergency Visit">24/7 Emergency Visit</option>
+                        </select>
+                        <span class="form-error">Please select a service</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required min="">
+                        <span class="form-error">Please select a date</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" name="time" required>
+                            <option value="" disabled selected>Select a time</option>
+
+                        </select>
+                        <span class="form-error">Please select a time</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes (Optional)</label>
+                        <textarea id="notes" name="notes" placeholder="Describe your symptoms or any additional information..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Confirm Appointment</button>
+                    <p id="status-msg" style="margin-top:12px;font-size:14px;color:#0fa3d4;"></p>
+                </form>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-container">
+            <h2 class="section-title">What Patients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="images/Rajesh.png" alt="Rajesh Kumar">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Mysore</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing service! The doctor came on time and was very professional. Saved me a trip to the hospital. Highly recommended!"</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="images/Priya.png" alt="Priya Sharma">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Mysore</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"My mother is 75 and has mobility issues. This service has been a lifesaver for us. The nurses are caring and efficient."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="images/Amit.png" alt="Amit Patel">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Amit Patel</h4>
+                            <p>Bangalore</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Very convenient for busy professionals like me. The online booking is easy and the staff is courteous. Worth every rupee!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-item">
+                        <h4>📞 Phone</h4>
+                        <a href="tel:+919876543210">+91-9876-543-210</a>
+                        <p>Available 24/7 for emergency calls</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <a href="mailto:support@cuure.health.com">support@cuure.health.com</a>
+                        <p>Response within 2 hours</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>💬 WhatsApp</h4>
+                        <a href="https://wa.me/919876543210">+91-9876-543-210</a>
+                        <p>Quick support via WhatsApp</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h4>📍 Address</h4>
+                        <p>1054, Sarvajanika Hostel Rd, Vidyaranyapura <br>Mysuru, Karnataka 570008</p>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.451278359824!2d76.65090049999999!3d12.285367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6f000b3893f1%3A0xcea52659bd651b3a!2sLinqway%20Techniks!5e0!3m2!1sen!2sin!4v1764922587289!5m2!1sen!2sin"
+                        loading="lazy"
+                        allowfullscreen=""
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTopBtn">⬆</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="#services">Doctor Consultation</a>
+                <a href="#services">Nursing Care</a>
+                <a href="#services">Physiotherapy</a>
+                <a href="#services">Lab Tests</a>
+                <a href="#services">Elderly care</a>
+                <a href="#services">24/7 Emergency Visit</a>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="#contact">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Help Center</a>
+                <a href="#">Book Now</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 cuure.health. All rights reserved.</p>
+            <p>Certified Medical Services | Trusted Healthcare Provider</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" width="28" height="28">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
