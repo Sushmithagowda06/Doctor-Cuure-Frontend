@@ -144,15 +144,19 @@ async function handleFormSubmit(event) {
   statusMsg.textContent = "Booking your appointment...";
   statusMsg.style.color = "#0fa3d4";
 
-  try {
-    const res = await fetch(
-      "http://127.0.0.1:5000/create-appointment",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      }
-    );
+const API_BASE = "https://doctor-cuure-backend.onrender.com";
+
+try {
+  const res = await fetch(
+    `${API_BASE}/create-appointment`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }
+  );
+
+
 
     const result = await res.json();
 
