@@ -38,8 +38,15 @@ function validateForm(form) {
 }
 
 /* ===============================
-   TIME HELPERS
+   DATE & TIME HELPERS
 ================================ */
+
+// Convert DD-MM-YYYY → YYYY-MM-DD
+function toISODate(ddmmyyyy) {
+  const [dd, mm, yyyy] = ddmmyyyy.split("-");
+  return `${yyyy}-${mm}-${dd}`;
+}
+
 // "08:00 AM" → "08:00"
 function convertTo24Hour(timeStr) {
   if (!timeStr) return "";
@@ -65,12 +72,12 @@ function toAmPmLabel(time24) {
 }
 
 /* ===============================
-   LOAD AVAILABLE SLOTS (BACKEND)
+   LOAD AVAILABLE SLOTS
 ================================ */
-async function loadAvailableSlots(dateStr) {
+async function loadAvailableSlots(dateISO) {
   const timeSelect = document.getElementById("time");
 
-  if (!dateStr) {
+  if (!dateISO) {
     timeSelect.innerHTML = '<option value="">Select a date first</option>';
     return;
   }
@@ -79,17 +86,13 @@ async function loadAvailableSlots(dateStr) {
 
   try {
     const res = await fetch(
-      `http://127.0.0.1:5000/available-slots?date=${dateStr}`
+      `http://127.0.0.1:5000/available-slots?date=${dateISO}`
     );
     const data = await res.json();
 
-    if (data.status !== "success") {
-      timeSelect.innerHTML =
-        '<option value="">Unable to load slots</option>';
-      return;
-    }
-
     const slots = data.slots || [];
+
+    timeSelect.innerHTML = "";
 
     if (slots.length === 0) {
       timeSelect.innerHTML =
@@ -105,6 +108,7 @@ async function loadAvailableSlots(dateStr) {
       option.textContent = toAmPmLabel(time24);
       timeSelect.appendChild(option);
     });
+
   } catch (err) {
     console.error(err);
     timeSelect.innerHTML = '<option value="">Server error</option>';
@@ -112,7 +116,7 @@ async function loadAvailableSlots(dateStr) {
 }
 
 /* ===============================
-   FORM SUBMISSION (BACKEND)
+   FORM SUBMISSION
 ================================ */
 async function handleFormSubmit(event) {
   event.preventDefault();
@@ -129,17 +133,13 @@ async function handleFormSubmit(event) {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  const payload = {
-    name: data.name,
-    date: data.date,
-    time: convertTo24Hour(data.time),
-    reason: `
-Service: ${data.service}
-Phone: ${data.phone}
-Address: ${data.address}
-Notes: ${data.notes || "N/A"}
-`.trim()
-  };
+ const payload = {
+  name: data.name,
+  date: data.date,        // DO NOT CONVERT
+  time: convertTo24Hour(data.time),
+  reason: `Service: ${data.service}`
+};
+
 
   statusMsg.textContent = "Booking your appointment...";
   statusMsg.style.color = "#0fa3d4";
@@ -166,7 +166,7 @@ Notes: ${data.notes || "N/A"}
         '<option value="">Select a time</option>';
     } else {
       statusMsg.textContent =
-        "❌ " + (result.message || "Slot not available.");
+        "❌ " + (result.error || "Slot not available.");
       statusMsg.style.color = "#dc3545";
     }
   } catch (err) {
@@ -188,9 +188,10 @@ if (bookingForm) {
 
 const dateInput = document.getElementById("date");
 if (dateInput) {
-  dateInput.addEventListener("change", e =>
-    loadAvailableSlots(e.target.value)
-  );
+ dateInput.addEventListener("change", e => {
+  loadAvailableSlots(e.target.value); // already YYYY-MM-DD
+});
+
 }
 
 /* ===============================
