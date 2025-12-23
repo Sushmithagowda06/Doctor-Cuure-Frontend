@@ -1104,5 +1104,21 @@ footer {
 .service-icon {
   background: #f2f6f9;
 }
+.hero {
+  text-align: center;
+  padding: 10px 8% 80px;
+}
+
+.hero-image-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hero-image-top img {
+  width: 100%;
+  max-width: 320px;  /* 🔥 increase/decrease size here */
+  height: auto;
+}
 
 
